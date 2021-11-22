@@ -43,3 +43,12 @@ addBook.addEventListener('click', (e) => {
   localStorage.setItem('localBookList', JSON.stringify(storedData));
 });
 
+bookList.addEventListener('click', (el) => {
+  if (el.target.classList.contains('delete')) {
+    document.querySelector('.books').removeChild(el.target.parentElement);
+    const bookD = el.target.parentElement;
+    const removeBook = storedData.find((item) => item.title === bookD.firstChild.innerText);
+    storedData.splice(storedData.indexOf(removeBook), 1);
+    localStorage.setItem('localBookList', JSON.stringify(storedData));
+  }
+});
