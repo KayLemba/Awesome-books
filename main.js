@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
 addBook.addEventListener('click', (e) => {
   const newBook = new Book(title.value, author.value);
   e.preventDefault();
