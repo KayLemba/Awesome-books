@@ -1,55 +1,42 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Awesome Books Project For Microverse By Kalolo Chola Lemba and Sam Mogare
 
-# Project Name
+# Live Demo link
+https://kaylemba.github.io/Awesome-books/
 
-> One paragraph statement about the project.
-
-![screenshot](./app_screenshot.png)
+> This is a simple web develoment project for microverse created using simple HTML(Hyper text mark-up Language.), CSS(Cascading Style Sheet) which is used for styling or decorating the webpage and Javascript.
+# WORKFLOW SCREENSHOT 
+![screenshot](formvalidate.png)
 
 Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+- Html
+- css
+- Javascript
+- Visual Studio Code
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+**Instructions on how to access my project locally.**
+ To Access my project locally please follow the following instructions;
+1. Enter this url:  https://kaylemba.github.io/Awesome-books/ in your web browser.
+2. Once opened navigate to the top left level of the project a green code download button will be visible on the righthand side.
+3. Select download Zip option from drop down menu.
+4. Once the download is complete you will be able to access my project locally.
+Here is my repository link:  https://kaylemba.github.io/Awesome-books/
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Kalolo Chola Lemba**
+- GitHub: [@KayLemba](https://github.com/KayLemba)
+- Twitter: [@King-Kaylo1](https://twitter.com/King_Kaylo1) 
+- LinkedIn: [@kalolo-lemba](https://www.linkedin.com/in/https://www.linkedin.com/in/kalolo-lemba-41a8339a/-41a8339a/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
+
+👤 **Sam Mong'are**
 
 - GitHub: [@githubhandle](https://github.com/Mosams/)
 - Twitter: [@twitterhandle](https://twitter.com/sam_mongare)
