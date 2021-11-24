@@ -1,12 +1,9 @@
-/* eslint-disable max-classes-per-file */
 class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
-}
 
-class Displays {
   static getBooks() {
     let books;
     if (localStorage.getItem('books') === null) {
@@ -18,15 +15,15 @@ class Displays {
   }
 
   static addBook(book) {
-    const books = Displays.getBooks();
+    const books = Book.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(author) {
-    const books = Displays.getBooks();
+  static re(title, author) {
+    const books = Book.getBooks();
     books.forEach((book, index) => {
-      if (book.author === author) {
+      if (book.title === title && book.author === author) {
         books.splice(index, 1);
       }
     });
@@ -34,8 +31,8 @@ class Displays {
   }
 
   static displayBooks() {
-    const books = Displays.getBooks();
-    books.forEach((book) => Displays.addBookToList(book));
+    const books = Book.getBooks();
+    books.forEach((book) => Book.addBookToList(book));
   }
 
   static addBookToList(book) {
@@ -46,7 +43,7 @@ class Displays {
     texty.innerHTML = `
       <h4>${book.title}</h4>
       <h4>${book.author}</h4>
-      <h4><button type="button" class= "delete">Remove </button></h4>
+      <button type="button" class= "delete">Remove </button>
       <hr>
       `;
 
@@ -55,7 +52,7 @@ class Displays {
 
   static deleteBook(el) {
     if (el.classList.contains('delete')) {
-      el.parentElement.parentElement.remove();
+      el.parentElement.remove();
     }
   }
 
@@ -65,19 +62,20 @@ class Displays {
   }
 }
 
-document.addEventListener('DOMContentLoaded', Displays.displayBooks);
+document.addEventListener('DOMContentLoaded', Book.displayBooks);
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault();
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   const book = new Book(title, author);
-  Displays.addBookToList(book);
-  Displays.addBook(book);
-  Displays.clearFields();
+  Book.addBookToList(book);
+  Book.addBook(book);
+  Book.clearFields();
 });
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
-  Displays.deleteBook(e.target);
+  Book.deleteBook(e.target);
 
-  Displays.removeBook(e.target.parentElement.previousSibling.previousSibling.textContent);
+  Book.re(e.target.previousSibling.previousSibling.previousSibling.previousSibling.textContent,
+    e.target.previousSibling.previousSibling.textContent);
 });
