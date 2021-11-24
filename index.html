@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome books</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="awesome">
     <h1>Awesome Books</h1>
-        <div id="book-list"></div><br>
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Author</th>
+            <th></th>
+        </thead>
+        <tbody id="book-list"></tbody>
+    </table><br>
+    <hr>
     <form class="form1" id="book-form">
     <div class="form-input">
         <label for="title"></label>
@@ -19,7 +28,7 @@
         <label for="author"></label>
         <input type="text" class="author" id="author" placeholder="Author" required >
     </div><br>
-    <button type="submit">Add</button>
+    <button type="submit" class="add">Add</button>
     </form>
 </div>
 <script src="main.js"></script>
