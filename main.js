@@ -38,12 +38,14 @@ class Book {
   static addBookToList(book) {
     const list = document.querySelector('#book-list');
 
-    const texty = document.createElement('tr');
+    const texty = document.createElement('li');
 
     texty.innerHTML = `
-      <td>${book.title}</td>
-      <td>${book.author}</td>
-      <td><button type="button" class= "delete">Remove </button></td>
+      <li class="book-item">
+      <p><q>${book.title}</q></p>
+      <p> by </p>
+      <p>${book.author}</p>
+      <button type="button" class= "delete">Remove </button></li>
       `;
 
     list.appendChild(texty);
@@ -51,7 +53,7 @@ class Book {
 
   static deleteBook(el) {
     if (el.classList.contains('delete')) {
-      el.parentElement.parentElement.remove();
+      el.parentElement.remove();
     }
   }
 
@@ -74,7 +76,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
-  const fe = e.target.parentElement.previousSibling.previousSibling;
-  Book.removeBook(fe.previousSibling.previousSibling.textContent,
-    e.target.parentElement.previousSibling.previousSibling.textContent);
+  const fe = e.target.previousSibling.previousSibling.previousSibling;
+  Book.removeBook(fe.previousSibling.previousSibling.previousSibling.firstChild.textContent,
+    e.target.previousSibling.previousSibling.textContent);
 });

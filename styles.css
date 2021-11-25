@@ -29,33 +29,31 @@ h1 {
   color: #fff;
 }
 
-tbody {
-  border-style: solid;
+ul {
+  list-style-type: none;
+  border: solid;
+  width: 100%;
+  padding-left: 0;
+  background-color: #fff;
 }
 
-table {
-  flex-direction: column;
-  width: 25rem;
-  background-color: white;
-  border: 2px solid black;
-  padding: 10px;
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
-tr {
-  margin-bottom: 2%;
-  text-align: center;
-}
-
-tr:nth-child(even) {
+.book-list:nth-child(odd) {
   background: #fff;
 }
 
-tr:nth-child(odd) {
+.book-list:nth-child(even) {
   background: #ccc;
 }
 
-th {
-  background-color: white;
+.book-item p {
+  align-self: flex-start;
 }
 
 .add-book {
@@ -85,6 +83,14 @@ hr {
   height: 3px;
   width: 20%;
   background-color: #fff;
+}
+
+.delete {
+  align-self: flex-end;
+  align-content: center;
+  width: 5rem;
+  height: 3rem;
+  background-color: blanchedalmond;
 }
 
 input {
