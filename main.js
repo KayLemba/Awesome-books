@@ -20,7 +20,7 @@ class Book {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static re(title, author) {
+  static removeBook(title, author) {
     const books = Book.getBooks();
     books.forEach((book, index) => {
       if (book.title === title && book.author === author) {
@@ -38,13 +38,14 @@ class Book {
   static addBookToList(book) {
     const list = document.querySelector('#book-list');
 
-    const texty = document.createElement('h4');
+    const texty = document.createElement('li');
 
     texty.innerHTML = `
-      <h4>${book.title}</h4>
-      <h4>${book.author}</h4>
-      <button type="button" class= "delete">Remove </button>
-      <hr>
+      <li class="book-item">
+      <p><q>${book.title}</q></p>
+      <p> by </p>
+      <p>${book.author}</p>
+      <button type="button" class= "delete">Remove </button></li>
       `;
 
     list.appendChild(texty);
@@ -75,7 +76,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
-
-  Book.re(e.target.previousSibling.previousSibling.previousSibling.previousSibling.textContent,
+  const fe = e.target.previousSibling.previousSibling.previousSibling;
+  Book.removeBook(fe.previousSibling.previousSibling.previousSibling.firstChild.textContent,
     e.target.previousSibling.previousSibling.textContent);
 });
