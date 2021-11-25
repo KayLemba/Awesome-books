@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+  font-family: 'Comfortaa', sans-serif;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  /* background-image: url(images/background.jpg); */
+  background-image: url(images/bookcase.jpeg);
   background-color: aliceblue;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .awesome {
@@ -14,21 +22,35 @@ body {
   align-self: center;
 }
 
+h1{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+  color: #fff
+}
+
 tbody {
   border-style: solid;
 }
 
 table {
   width: 18rem;
+  flex-direction: column;
+  width: 25rem;
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
 }
 
 tr {
   margin-bottom: 2%;
   text-align: center;
 }
+
 tr:nth-child(even) {
   background: #fff
 }
+
 tr:nth-child(odd) {
   background: #ccc
 }
@@ -37,19 +59,35 @@ th {
   background-color: white;
 }
 
+.add-book{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #fff
+}
+
 .form-input {
   display: flex;
   flex-direction: column;
   align-self: center;
+  padding: 10px 5px;
 }
 
 hr {
-  width: 20%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 20%
 }
 
 .add {
-  margin-left: 80%;
+  margin-left: 84%;
   width: 3.5rem;
+}
+
+.line {
+  height: 3px;
+  width: 20%;
+  background-color: #fff;
+}
+
+input {
+  height: 25px;
 }
