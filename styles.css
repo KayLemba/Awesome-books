@@ -26,7 +26,7 @@ header {
   color: red;
   font-size: 1.2rem;
   width: 100vw;
-  border: solid red;
+  border: solid beige;
 }
 
 .header ul {
@@ -204,6 +204,6 @@ footer {
   color: #fff;
   font-size: 1.2rem;
   width: 100vw;
-  border: solid red;
+  border: solid beige;
   font-weight: 700;
 }
