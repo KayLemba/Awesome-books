@@ -5,13 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome books</title>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/global/luxon.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1 class="heading">Awesome Books</h1>
+        <nav>
+            <ul class="nav-list">
+                <li ><a class="link bookListing" href="#">List</a></li>
+                <li ><a class="link addNew" href="#">Add new</a></li>
+                <li ><a class="link contactInfo" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="time-div"></div>
  <main>
-    <div class="awesome">
-    <h1>All awesome books</h1>
+<div class="awesome">
+<section class="displayed-books" id="displayed-books">
+    <h2 class="heading">All awesome books</h2>
         <ul id="book-list"></ul><br>
+</section>
+<section class="books-adding">
     <hr class="line">
     <form class="form1" id="book-form">
     <div class="form-input">
@@ -25,8 +40,25 @@
     </div><br>
     <button type="submit" class="add">Add</button>
     </form>
+</section>
 </div>
-<script src="main.js"></script>
+<section class="contact-me" id="contact-me">
+    <h2 class="heading">Contact Information</h2>
+    <p>Do you have any question or you just want to say "Hello"? <br> You can reach out to us! </p>
+    <ul>
+    <li>Our-email: sam.Lemba@hardwork.com</li>
+    <li>Our phone number: +2 333 444 555 </li>
+    <li>Our Address: Nairobi 22, 84503, Zambia</li></ul>
+</section>
 </main>
+<footer>
+    <p class="copyright">
+        &copy;Copyright
+    </p>
+    <p class="rights">Some Rights Reserved 2021</p>
+</footer>
+<script src="main.js"></script>
+<script src="pages.js"></script>
+<script src="luxon.js"></script>
 </body>
 </html>
