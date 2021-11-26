@@ -42,9 +42,7 @@ class Book {
 
     texty.innerHTML = `
       <li class="book-item">
-      <p><q>${book.title}</q></p>
-      <p> by </p>
-      <p>${book.author}</p>
+      <p><q>${book.title}</q> by <i>${book.author}</i></p>
       <button type="button" class= "delete">Remove </button></li>
       `;
 
@@ -76,7 +74,6 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
-  const fe = e.target.previousSibling.previousSibling.previousSibling;
-  Book.removeBook(fe.previousSibling.previousSibling.previousSibling.firstChild.textContent,
-    e.target.previousSibling.previousSibling.textContent);
+  const fe = e.target.previousSibling.previousSibling;
+  Book.removeBook(fe.firstChild.textContent, fe.lastChild.textContent);
 });
